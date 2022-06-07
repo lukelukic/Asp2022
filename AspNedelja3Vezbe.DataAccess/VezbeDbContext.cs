@@ -7,10 +7,10 @@ namespace AspNedelja3Vezbe.DataAccess
 {
     public class VezbeDbContext : DbContext
     {
-        public VezbeDbContext(DbContextOptions options = null) : base(options)
-        {
+        //public VezbeDbContext(DbContextOptions options = null) : base(options)
+        //{
 
-        }
+        //}
 
 
         public IApplicationUser User { get; }
@@ -23,11 +23,13 @@ namespace AspNedelja3Vezbe.DataAccess
             base.OnModelCreating(modelBuilder);
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog=AspVezbe_3;Integrated Security=True")
-        //        .UseLazyLoadingProxies();
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var connStr = "Server=tcp:asp2022db.database.windows.net,1433;Initial Catalog=Asp2022;Persist Security Info=False;User ID=aspadmin;Password=Sifra123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+            optionsBuilder.UseSqlServer(connStr)
+                .UseLazyLoadingProxies();
+        }
 
         public override int SaveChanges()
         {

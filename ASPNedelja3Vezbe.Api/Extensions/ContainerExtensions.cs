@@ -115,7 +115,7 @@ namespace ASPNedelja3Vezbe.Api.Extensions
 
                 var options = optionsBuilder.Options;
 
-                return new VezbeDbContext(options);
+                return new VezbeDbContext();
             });
         }
     }
