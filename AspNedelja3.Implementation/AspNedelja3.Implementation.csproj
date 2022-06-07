@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ASPNedelja3.Application\ASPNedelja3.Application.csproj" />
+    <ProjectReference Include="..\AspNedelja3Vezbe.DataAccess\AspNedelja3Vezbe.DataAccess.csproj" />
+    <ProjectReference Include="..\ASPNedelja3Vezbe.Domain\ASPNedelja3Vezbe.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="FluentValidation" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+﻿1. Svaki slucaj koriscenja moze da se izvrsi
+2. Postoje slucajevi koriscenja koji zahtevaju i oni koji ne 
+   zahtevaju povratnu vrednost
+3. Cross cutting concerns (potrebno da se desi za svaki slucaj koriscenja)
+   - Exception handling
+   - Logging (Naziv, Kada, Ko, Uspesnost, Podaci(*))
+   - (Validacija?)
+   - Autorizacija
+   - Trajanje izvrsavanja
+
+CQRS (Command Query Reponsibility Seggregation)
+Command - sve sto menja stanje sistema
+Query - citanje podataka sa sistema (bez promene podataka)
