@@ -68,7 +68,7 @@ namespace AspNedelja3Vezbe.Tests.Validation
 
                 var options = optionsBuilder.Options;
 
-                return new VezbeDbContext();
+                return new VezbeDbContext(options);
             }
         }
     }
